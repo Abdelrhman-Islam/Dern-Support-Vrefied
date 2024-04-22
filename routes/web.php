@@ -37,6 +37,8 @@ Route::post('/storeTicket', [AppController::class, 'storeTicket'])->name('ticket
 
 Route::get('/ticket/{id}', [AppController::class, 'showTicket'])->name('ticket.show');
 
+Route::get('/qa', [AppController::class, 'qa'])->name('qa');
+
 Route::get('/adminHome', [AppController::class, 'adminHome'])->name('adminHome');
 
 require __DIR__.'/auth.php';

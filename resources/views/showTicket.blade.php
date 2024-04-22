@@ -9,7 +9,7 @@
             <div class="card-body">
               <h5 class="card-title">Competition Name: {{ $data->cat }} </h5>
               <h5 class="card-title">Competition Description: {{ $data->desc }} </h5>
-              <h5 class="card-title">Competition Description: {{ $data->prise }} </h5>
+              <h5 class="card-title">Competition Description: {{ $data->price }} </h5>
             </div>
         </div>
     </div>

@@ -11,6 +11,7 @@ class ticket extends Model
     protected $fillable = [
         'cat',
         'desc',
+        'price',
         'userId',
     ];
 }

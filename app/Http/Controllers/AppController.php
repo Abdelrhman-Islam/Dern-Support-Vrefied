@@ -32,7 +32,7 @@ class AppController extends Controller
     }
 
     public function userHome(){
-        $tickets = Ticket::all()->where('userId',Auth::user()->id );
+        $tickets = Ticket::all()->where('userId' ,Auth::user()->id );
         return view('userHome', compact('tickets'));
     }
 
@@ -41,24 +41,8 @@ class AppController extends Controller
     }
 
     public function createTicket(){
-        return view('bookTicket');
-    }
 
-    public function storeTicket(){
-        $data = request()->all();
-        $cat = request()->cat;
-        $desc = request()->desc;
-        $userId = Auth::user()->id;
 
-        Ticket::create([
-            'cat' => $cat,
-            'desc' => $desc,
-            'userId' => $userId,
-        ]);
-
-        $price = Problem::all()->where('cat', $cat)->pluck('price');
-
-        $problems = Problem::all();
 
         $isProcessorExist = Problem::where('cat','processor')->first();
         if(  $isProcessorExist == FALSE ){
@@ -145,13 +129,37 @@ class AppController extends Controller
         }
 
 
-        return to_route('ticket.show',$data->id);
+        return view('bookTicket');
+    }
+
+    public function storeTicket(){
+        $data = request()->all();
+        $cat = request()->cat;
+        $desc = request()->desc;
+        $userId = Auth::user()->id;
+        $price = Problem::all()->where('cat', $cat)->pluck('price');
+
+        Ticket::create([
+            'cat' => $cat,
+            'desc' => $desc,
+            'price' => $price,
+            'userId' => $userId,
+        ]);
+
+
+
+        return to_route('userHome');
 
 
     }
 
     public function showTicket($id){
         $data = Ticket::find($id);
-        return view( 'showTicket' , compact('data'));
+        $price = $data->pluck('price');
+        return view( 'showTicket' , compact('data', 'price'));
+    }
+
+    public function qa(){
+        return view('qa');
     }
 }

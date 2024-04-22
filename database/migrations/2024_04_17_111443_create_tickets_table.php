@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('cat');
             $table->string('desc');
+            $table->string('price');
             $table->unsignedBigInteger('userId');
             $table->foreign('userId')->references('id')->on('users');
             $table->timestamps();

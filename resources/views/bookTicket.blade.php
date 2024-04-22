@@ -11,7 +11,7 @@
             @csrf
             <select name="cat" class="form-select mt-10" aria-label="Default select example">
                 <option selected> Select Your Ticket Category </option>
-                <option value="processor">processor</option>
+                <option value="processor">Processor</option>
                 <option value="ram">RAM</option>
                 <option value="harDisck">Hard Disck</option>
                 <option value="graphicsCard">Graphics Card</option>
