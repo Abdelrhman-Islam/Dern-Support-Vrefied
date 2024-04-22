@@ -1,0 +1,42 @@
+1- Handel User Data Need DB :
+	1-id
+	2-type
+	3-name
+	4-email
+	5-phoneNum
+	6-pass
+2- Handel Ticket Data Need DB :
+	1-id
+	2-cat
+	3-desc
+	4-userId
+	5-CreatedAt
+////////////// Done ////////////////////
+
+
+
+3- Check type :
+	if user :
+		Go To Landing Page 
+	elseIf admin:
+		Go To Community "CRU App"
+
+
+///////////// Done //////////////
+
+4- Create ticket:
+
+				/-------- * Price Issue * ------------/
+
+
+
+/////////////////////
+
+5- Create Orgnization type
+6- Q/A
+7- Admin Home
+
+/////////// Workink on it /////////////
+
+
+	
