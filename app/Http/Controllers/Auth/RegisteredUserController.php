@@ -30,8 +30,12 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-
-        $type = 'user';
+        $isOrg = request()->org;
+        if($isOrg == TRUE){
+        $type = 'org';}
+        else{
+            $type = 'user';
+        }
         $name = request()->name;
         $email = request()->email;
         $phoneNum = request()->phoneNum;

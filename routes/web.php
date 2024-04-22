@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,6 +40,6 @@ Route::get('/ticket/{id}', [AppController::class, 'showTicket'])->name('ticket.s
 
 Route::get('/qa', [AppController::class, 'qa'])->name('qa');
 
-Route::get('/adminHome', [AppController::class, 'adminHome'])->name('adminHome');
+Route::get('/adminHome', [AdminController::class, 'index'])->name('adminHome');
 
 require __DIR__.'/auth.php';

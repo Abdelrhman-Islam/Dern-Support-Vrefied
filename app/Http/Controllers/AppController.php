@@ -28,16 +28,11 @@ class AppController extends Controller
         }
 
         return view('ld');
-
     }
 
     public function userHome(){
         $tickets = Ticket::all()->where('userId' ,Auth::user()->id );
         return view('userHome', compact('tickets'));
-    }
-
-    public function adminHome(){
-        return view('adminHome');
     }
 
     public function createTicket(){
@@ -114,6 +109,7 @@ class AppController extends Controller
             Problem::create([
                 'cat' => 'mouse',
                 'desc' => "Elevate your computing experience with our precision-engineered mouse. Designed for comfort and accuracy, it glides effortlessly across any surface, delivering smooth and responsive performance. With customizable buttons and ergonomic design, it's perfect for both work and play, providing ultimate control and comfort for hours of use. Upgrade your setup and unleash your full potential with our top-of-the-line mouse.",
+
                 'price' => "$20",
             ]);
         }

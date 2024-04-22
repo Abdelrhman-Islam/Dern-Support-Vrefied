@@ -14,7 +14,7 @@
 
         <section class="text-center ">
             <div>
-                <a class="btn btn-outline-success btn-lg m-5" href="{{ route('login') }}"> Login </a>
+                <a class="btn btn-outline-success btn-lg m-5" href="{{ route('qa') }}"> Q / A </a>
                 <a class="btn btn-outline-success btn-lg m-5" href="{{ route('register') }}"> SignUp </a>
             </div>
         </section>
