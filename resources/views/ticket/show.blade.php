@@ -1,6 +1,5 @@
-
 @extends('layouts.layout')
-@section('title') Show @endsection
+@section('title') Show Ticket @endsection
 @section('content')
 <x-app-layout>
     <div class="container">

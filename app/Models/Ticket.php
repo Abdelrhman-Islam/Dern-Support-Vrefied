@@ -12,6 +12,7 @@ class ticket extends Model
         'cat',
         'desc',
         'price',
+        'prob',
         'userId',
     ];
 }

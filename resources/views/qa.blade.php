@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title') Show @endsection
+@section('title') Q / A @endsection
 @section('content')
 <div class="container mt-5" >
     <div class="text-center mb-5">

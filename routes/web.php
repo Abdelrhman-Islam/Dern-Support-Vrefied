@@ -28,9 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/userHome', [AppController::class, 'userHome'])->name('userHome');
+Route::get('/userHome', [AppController::class, 'userHome'])->name('user.index');
 
-Route::get('/createProblem', [AppController::class, 'createProblem'])->name('problem.create');
+//////////// Tickets ////////////
 
 Route::get('/createTicket', [AppController::class, 'createTicket'])->name('ticket.create');
 
@@ -38,8 +38,25 @@ Route::post('/storeTicket', [AppController::class, 'storeTicket'])->name('ticket
 
 Route::get('/ticket/{id}', [AppController::class, 'showTicket'])->name('ticket.show');
 
+///////////// Q / A /////////////
+
 Route::get('/qa', [AppController::class, 'qa'])->name('qa');
 
-Route::get('/adminHome', [AdminController::class, 'index'])->name('adminHome');
+//////////// Admins /////////////
+
+Route::get('/adminHome', [AdminController::class, 'index'])->name('admin.index');
+
+Route::put('/setProb/{id}', [AdminController::class, 'setProb'])->name('prob.set');
+
+
+//////////// Inventory //////
+
+Route::get('/inventory', [AdminController::class, 'invIndex'])->name('inventory.index');
+
+Route::get('/inventory/crete', [AdminController::class, 'create'])->name('inventory.create');
+
+Route::put('/inventory/{id}', [AdminController::class, 'updateQty'])->name('inventory.update');
+
+Route::delete('/inventory/{id}', [AdminController::class, 'destroy'])->name('inventory.destroy');
 
 require __DIR__.'/auth.php';
