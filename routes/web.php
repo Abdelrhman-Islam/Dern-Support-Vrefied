@@ -53,10 +53,8 @@ Route::put('/setProb/{id}', [AdminController::class, 'setProb'])->name('prob.set
 
 Route::get('/inventory', [AdminController::class, 'invIndex'])->name('inventory.index');
 
-Route::get('/inventory/crete', [AdminController::class, 'create'])->name('inventory.create');
+Route::get('/inventory/create', [AdminController::class, 'create'])->name('inventory.create');
 
 Route::put('/inventory/{id}', [AdminController::class, 'updateQty'])->name('inventory.update');
-
-Route::delete('/inventory/{id}', [AdminController::class, 'destroy'])->name('inventory.destroy');
 
 require __DIR__.'/auth.php';

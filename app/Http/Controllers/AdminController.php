@@ -46,8 +46,4 @@ class AdminController extends Controller
         return to_route('inventory.index');
     }
 
-    public function delete(){
-
-    }
-
 }
