@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Ticket;
-use App\Models\Problem;
 use App\Models\Product;
 
 use Illuminate\Support\Facades\Hash;
