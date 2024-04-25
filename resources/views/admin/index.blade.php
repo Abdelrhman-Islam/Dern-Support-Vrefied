@@ -36,7 +36,6 @@
                                         <option value="important" class="bg-warning">Important</option>
                                         <option value="notUrgent" class="bg-success">Not urgent</option>
                                     </select>
-
                             </td>
                             <td>
                                 <button type="submit">Submit</button>
