@@ -26,8 +26,8 @@
 
               <button type="submit" class="btn bg-success mt-3 p-2">Submit</button>
 
-
         </form>
+        
     </div>
 </x-app-layout>
 @endsection

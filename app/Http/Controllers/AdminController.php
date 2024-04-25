@@ -41,10 +41,6 @@ class AdminController extends Controller
         $part = Product::find($id);
         $part->qty = request()->qty;
         $part->save();
-        // $qty = request()->qty;
-        // $part->update([
-        //     'qty' => $qty,
-        // ]);
 
 
         return to_route('inventory.index');

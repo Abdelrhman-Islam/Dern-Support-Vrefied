@@ -40,12 +40,10 @@
                             </td>
                             <td>
                                 <button type="submit">Submit</button>
-                            </form>
                             </td>
                         </tr>
                     @endforeach
-
-
+                        </form>
                 </tbody>
             </table>
         </div>
