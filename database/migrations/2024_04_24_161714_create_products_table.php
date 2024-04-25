@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('cat');
             $table->text('desc');
             $table->string('price');
-            $table->integer('qty')->nullable();
+            $table->double('qty')->nullable();
             $table->timestamps();
         });
     }

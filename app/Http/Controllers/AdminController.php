@@ -29,7 +29,7 @@ class AdminController extends Controller
     }
 
     public function invIndex(){
-        $data = Inventory::all();
+        $data = Product::all();
         return view('inventory.index', compact('data'));
     }
 
@@ -41,7 +41,12 @@ class AdminController extends Controller
         $part = Product::find($id);
         $part->qty = request()->qty;
         $part->save();
-        view('inventory.create');
+        // $qty = request()->qty;
+        // $part->update([
+        //     'qty' => $qty,
+        // ]);
+
+
         return to_route('inventory.index');
     }
 

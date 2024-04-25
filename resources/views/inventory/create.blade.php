@@ -5,7 +5,7 @@
 
     <div class="container">
 
-        <form action="{{ route('inventory.update') }}" method="POST">
+        <form action="{{ route('inventory.update',$mainCat->id) }}" method="POST">
             @csrf
             @method('PUT')
               <table class="table">

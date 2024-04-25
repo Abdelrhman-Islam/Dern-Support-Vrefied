@@ -4,7 +4,6 @@
     <x-app-layout>
         <div class="container text-center mt-3">
 
-            <a class="btn btn-outline-success" href="{{ route('inventory.create') }}">Add Element to Inventory </a>
 
             <table class="table">
                 <thead>
@@ -12,6 +11,8 @@
                     <th scope="col">#</th>
                     <th scope="col">Categoty</th>
                     <th scope="col">QTY</th>
+                    <th scope="col">Edit QTY</th>
+                    <th scope="col">Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -20,6 +21,19 @@
                             <th scope="row">{{ $inv->id }}</th>
                             <td>{{ $inv->cat }}</td>
                             <td>{{ $inv->qty }}</td>
+
+
+                                <form action="{{ route('inventory.update',$inv->id) }}" method="POST">
+                                    @csrf
+                                    @method("PUT")
+                                    <td>
+                                        <input type="text" placeholder="QTY"  name="qty" style="width: 100%" >
+                                    </td>
+                                    <td>
+                                        <button type="submit" class="btn btn-outline-success">Submit</button>
+                                    </td>
+
+                                </form>
                         </tr>
                     @endforeach
 
