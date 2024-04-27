@@ -15,4 +15,7 @@ To run this project follow this few steps
 			#Follow the link that appears in front of you
 
 
+** Admin Account **
+email "admin@gmail.com"
+password "00000000"
 ## I hope you enjoy the experience of my project (^_^)
