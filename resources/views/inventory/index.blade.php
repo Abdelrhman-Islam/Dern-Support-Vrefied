@@ -40,6 +40,9 @@
 
                 </tbody>
             </table>
+
+            <a class="btn btn-primary" href="{{ route('admin.index') }}"> Home </a>
+
         </div>
     </x-app-layout>
 @endsection

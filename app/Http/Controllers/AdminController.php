@@ -118,10 +118,6 @@ class AdminController extends Controller
         return view('inventory.index', compact('data'));
     }
 
-    public function create(){
-        $mainCat = Product::all();
-        return view('inventory.create', compact('mainCat'));
-    }
     public function updateQty($id) {
         $part = Product::find($id);
         $part->qty = request()->qty;

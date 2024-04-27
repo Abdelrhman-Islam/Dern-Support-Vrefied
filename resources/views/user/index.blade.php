@@ -6,20 +6,28 @@
     <div class="container">
 <div class="row">
 
-        @foreach ($tickets as $ticket )
-        <div class="col-3 mt-2 text-center ">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">{{ $ticket->cat }}</h5>
-                  <p class="card-text">{{ $ticket->desc }}</p>
-                  <a href="{{ route('ticket.show', $ticket->id) }}" class="btn btn-primary">View</a>
-                </div>
-              </div>
-        </div>
+    <div class="col-xxl-7 mt-4 text-center">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">product</th>
+                <th scope="col">Description</th>
+                <th scope="col">price</th>
+              </tr>
+            </thead>
+            <tbody>
+             @foreach ( $tickets as $ticket )
+                <tr>
+                    <td>{{ $ticket->cat }}</td>
+                    <td>{{ $ticket->desc }}</td>
+                    <td>{{ $ticket->price }}</td>
+                </tr>
+             @endforeach
+            </tbody>
+          </table>
+          <a class="btn btn-success m-3 text-center" href="{{ route('ticket.create') }}">Book New Ticket</a>
 
-        @endforeach
     </div>
-        <a class="btn btn-success m-3 text-center" href="{{ route('ticket.create') }}">Book New Ticket</a>
     </div>
 </x-app-layout>
 @endsection
