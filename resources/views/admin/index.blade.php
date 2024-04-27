@@ -6,6 +6,7 @@
 
             <a class="btn btn-outline-success mb-3" href="{{ route('inventory.index') }}"> Inventory </a>
 
+            
             <table class="table">
                 <thead>
                 <tr>
@@ -36,11 +37,11 @@
                                     <label for="Important">Important</label>
                                     <input type="radio" id="NotUrgent" name="prob" value="NotUrgent">
                                     <label for="NotUrgent">Not Urgent</label>
-                            <td>
-                                <button type="submit">Submit</button>
-                            </td>
+                                    <td>
+                                        <button type="submit">Submit</button>
+                                    </td>
+                                </form>
                         </tr>
-                    </form>
                     @endforeach
                 </tbody>
             </table>

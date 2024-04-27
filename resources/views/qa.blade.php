@@ -9,16 +9,17 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Overheating
+                Continuous Beep:
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong> If your computer is overheating, it can lead to performance issues or even damage components. Solutions include:</strong>
+              <strong>Problem: A continuous beep often indicates a power supply or motherboard issue.</strong>
               <ul>
-                <li>Ensure proper airflow around the computer.</li>
-                <li>Clean dust and debris from fans and vents.</li>
-                <li>Consider adding additional cooling solutions like more fans or a better CPU cooler.</li>
+                <li>=>Check that all power connectors are securely plugged in, including the main motherboard power connector and CPU power connector.</li>
+                <li>=>Test the power supply unit (PSU) with a multimeter or PSU tester to ensure it's delivering proper voltage.</li>
+                <li>=>Remove and reseat the RAM modules, graphics card, and other expansion cards to ensure they are properly seated.</li>
+                <li>=>If the issue persists, it may indicate a faulty motherboard or CPU, which may require professional diagnosis and repair.</li>
               </ul>
             </div>
           </div>
@@ -27,16 +28,17 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Slow performance
+                One Long, Two Short Beeps (or similar pattern):
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>Slow performance can be caused by various factors such as insufficient RAM, a fragmented hard drive, or too many background processes. Solutions include:</strong>
+              <strong>Problem: This beep pattern typically indicates a problem with the graphics card or its connection.</strong>
               <ul>
-                <li>Upgrade RAM if possible.</li>
-                <li>Perform disk defragmentation (for HDDs) or trim (for SSDs).</li>
-                <li>Close unnecessary background applications or processes.</li>
+                <li>=> Ensure the graphics card is securely seated in its PCIe slot.</li>
+                <li>=> Check that the power connectors to the graphics card are properly connected.</li>
+                <li>=> Test the graphics card in another computer or try using a different graphics card to determine if the issue lies with the card itself.</li>
+                <li>=> If the problem persists, it may indicate a faulty graphics card or PCIe slot on the motherboard, requiring further investigation.</li>
               </ul>
           </div>
         </div>
@@ -44,16 +46,17 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Blue Screen of Death (BSOD)
+                Three Long Beeps:
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is a system error that causes the computer to crash and display a blue screen. It can be caused by hardware or software issues. Solutions include:</strong>
+              <strong>Problem: Three long beeps usually signal a memory (RAM) error.</strong>
               <ul>
-                <li>Update device drivers.</li>
-                <li>Check for hardware compatibility issues.</li>
-                <li>Run hardware diagnostics to identify faulty components.</li>
+                <li>=> Reseat the RAM modules to ensure they are properly seated in their slots.</li>
+                <li>=> Test each RAM module individually in different memory slots to identify a potentially faulty module or slot.</li>
+                <li>=> Clean the RAM contacts with a soft cloth and reinsert them.</li>
+                <li>=> If the issue persists, try replacing the RAM modules with known working ones to determine if the problem lies with the RAM itself.</li>
               </ul>
             </div>
           </div>
@@ -62,16 +65,17 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFore" aria-expanded="false" aria-controls="collapseFore">
-                Hardware failure (e.g., hard drive failure)
+                One Long Beep Followed by Three Short Beeps:
             </button>
           </h2>
           <div id="collapseFore" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>TComponents can fail due to age, manufacturing defects, or physical damage. Solutions include:</strong>
+              <strong>Problem: This beep pattern often indicates a problem with the system's RAM or memory configuration.</strong>
               <ul>
-                <li>Regularly back up important data to prevent loss.</li>
-                <li>Replace the faulty hardware component (e.g., hard drive, RAM stick).</li>
-                <li>Use diagnostic tools to identify and troubleshoot the failing hardware.</li>
+                <li>=> Reseat the RAM modules and ensure they are properly seated in their slots.</li>
+                <li>=> Verify that the RAM modules are compatible with the motherboard and are installed in the correct slots according to the motherboard manual.</li>
+                <li>=> Test each RAM module individually in different slots to identify potential issues.</li>
+                <li>=> If possible, try using known working RAM modules to determine if the problem lies with the RAM itself or the motherboard.</li>
               </ul>
             </div>
           </div>
@@ -80,58 +84,22 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                Noisy fans or hard drives
+                No Beep (or No POST):
             </button>
           </h2>
           <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>Excessive noise from fans or hard drives can be annoying and may indicate a problem. Solutions include:</strong>
+              <strong>Problem: If the computer does not produce any beep codes or display any signs of Power-On Self-Test (POST), it indicates a severe hardware failure.</strong>
               <ul>
-                <li>Clean dust and debris from fans and vents.</li>
-                <li>Replace worn-out or malfunctioning fans or hard drives.</li>
-                <li>Ensure proper mounting and alignment of components to reduce vibrations.</li>
+                <li>=> Check that all power connections are secure and that the power supply unit (PSU) is functioning correctly.</li>
+                <li>=> Ensure that all components are properly seated, including the CPU, RAM, graphics card, and cables.</li>
+                <li>=> Test individual components (RAM, CPU, GPU) in another system if possible to identify faulty hardware.</li>
+                <li>=> If the issue persists, consider consulting a professional technician or contacting the manufacturer's support for further assistance.</li>
               </ul>
             </div>
           </div>
         </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                Peripheral connectivity issues
-            </button>
-          </h2>
-          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>Problems with peripherals such as printers, mice, or keyboards not being recognized can occur due to faulty connections or driver issues. Solutions include:</strong>
-              <ul>
-                <li>Check cable connections and try different ports.</li>
-                <li>Update device drivers.</li>
-                <li>Test peripherals on another computer to isolate the issue.</li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                Screen/display issues (e.g., flickering, no display)
-            </button>
-          </h2>
-          <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>Problems with the display can be caused by issues with the monitor, graphics card, or cable connections. Solutions include:</strong>
-              <ul>
-                <li>Check cable connections between the monitor and computer.</li>
-                <li>Update graphics card drivers.</li>
-                <li>Test the monitor on another computer to determine if it's the source of the problem.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+        
     </div>
 </div>
 @endsection

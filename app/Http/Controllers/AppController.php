@@ -25,6 +25,54 @@ class AppController extends Controller
                 'collageCode' => 1,
                 'password' => Hash::make('00000000'),
             ]);
+
+
+        $isCPUExist = Product::where('cat','CPU (Central Processing Unit)')->first();
+        if(  $isCPUExist == FALSE ){
+            Product::create([
+                'cat' => 'CPU (Central Processing Unit)',
+                'desc' => "The CPU is the brain of the computer, responsible for executing instructions and performing calculations. It determines the overall performance of the system and influences tasks such as gaming, video editing, and multitasking. Popular options include Intel Core i5/i7/i9 series or AMD Ryzen series CPUs, offering varying levels of performance and features.",
+                'price' => "250$",
+            ]);
+        }
+
+
+        $isGPUExist = Product::where('cat', 'GPU (Graphics Processing Unit)')->first();
+        if(  $isGPUExist == FALSE ){
+            Product::create([
+                'cat' => 'GPU (Graphics Processing Unit)',
+                'desc' => "The GPU, also known as a graphics card or video card, handles rendering images and videos on the computer monitor. It is essential for gaming, graphic design, video editing, and other multimedia tasks. Options include NVIDIA GeForce RTX or AMD Radeon RX series GPUs, offering different levels of performance and features such as ray tracing and VR support.",
+                'price' => "500$",
+            ]);
+        }
+
+        $isRAMExist = Product::where('cat', 'RAM (Random Access Memory)')->first();
+        if( $isRAMExist == FALSE ){
+            Product::create([
+                'cat' => 'RAM (Random Access Memory)',
+                'desc' => "RAM is temporary storage that the CPU uses to store data and program instructions actively being used. More RAM allows for smoother multitasking and better performance in memory-intensive applications. Common types include DDR4 memory modules, available in various capacities (e.g., 8GB, 16GB, 32GB) and speeds (e.g., 2400MHz, 3200MHz).",
+
+                'price' => '100$',
+            ]);
+        }
+
+        $isSSDExist = Product::where('cat', 'SSD (Solid State Drive)')->first();
+        if(  $isSSDExist == FALSE ){
+            Product::create([
+                'cat' => 'SSD (Solid State Drive)',
+                'desc' => " SSDs are storage devices that use flash memory to store data, offering faster read/write speeds compared to traditional mechanical hard drives (HDDs). They significantly improve system boot times, application loading times, and overall system responsiveness. Options include SATA SSDs for budget-friendly upgrades or NVMe SSDs for even faster performance, available in capacities ranging from 250GB to 2TB or more.",
+                'price' => "300$",
+            ]);
+        }
+
+        $iMotherboardExist = Product::where('cat', 'Motherboard')->first();
+        if(  $iMotherboardExist == FALSE ){
+            Product::create([
+                'cat' => 'Motherboard',
+                'desc' => "The motherboard is the main circuit board that connects and integrates various hardware components in the computer system, such as the CPU, RAM, GPU, storage drives, and peripherals. It determines the compatibility and expandability of the system, supporting features like overclocking, multiple GPU configurations, and connectivity options. Popular choices include ATX or microATX form factor motherboards from brands like ASUS, MSI, Gigabyte, and ASRock.",
+                'price' => '200$',
+            ]);
+        }
         }
 
         return view('ld');
@@ -37,92 +85,6 @@ class AppController extends Controller
 
     public function createTicket(){
 
-
-
-        $isProcessorExist = Product::where('cat','processor')->first();
-        if(  $isProcessorExist == FALSE ){
-            Product::create([
-                'cat' => 'processor',
-                'desc' => "Unlock blazing-fast performance with our cutting-edge processor. Designed to tackle the most demanding tasks with ease, our processor boasts multiple cores and lightning-fast clock speeds, ensuring seamless multitasking and smooth computing experiences. With its advanced architecture and efficient power management, you'll breeze through tasks, from gaming to content creation, without skipping a beat. Upgrade your system today and unleash the full potential of your computing experience with our top-of-the-line processor.",
-                'price' => "$200",
-            ]);
-        }
-
-
-        $isRamExist = Product::where('cat', 'ram')->first();
-        if(  $isRamExist == FALSE ){
-            Product::create([
-                'cat' => 'ram',
-                'desc' => "Experience lightning-fast performance and unparalleled multitasking capabilities with our high-speed RAM. Engineered for maximum efficiency, our RAM modules deliver blazing-fast data access, ensuring smooth operation even under the most demanding workloads. Whether you're gaming, streaming, or tackling intensive tasks, our RAM will elevate your system's performance to new heights. Upgrade your computer today and unleash its full potential with our premium-quality RAM.",
-                'price' => "$70",
-            ]);
-        }
-
-        $isHardExist = Product::where('cat', 'harDisck')->first();
-        if( $isHardExist == FALSE ){
-            Product::create([
-                'cat' => 'harDisck',
-                'desc' => "Elevate your storage experience with our high-capacity hard disk drive (HDD). With ample space to store all your important files, documents, photos, and videos, our HDD ensures you never have to worry about running out of storage again. Built for reliability and longevity, our HDD offers fast data transfer speeds and seamless performance, making it perfect for both personal and professional use. Upgrade your storage solution today and enjoy peace of mind knowing your data is safe and easily accessible with our top-of-the-line hard disk drive.",
-
-                'price' => "100",
-            ]);
-        }
-
-        $isGraphicsCardExist = Product::where('cat', 'graphicsCard')->first();
-        if(  $isGraphicsCardExist == FALSE ){
-            Product::create([
-                'cat' => 'graphicsCard',
-                'desc' => "Experience immersive gaming and breathtaking visuals with our cutting-edge graphics card. Powered by the latest technology, our GPU delivers stunning graphics and smooth frame rates, bringing your favorite games and multimedia content to life like never before. With advanced features and robust performance, our graphics card is perfect for gamers, content creators, and enthusiasts alike. Elevate your computing experience and unlock the full potential of your system with our premium-quality graphics card.",
-                'price' => "$400",
-            ]);
-        }
-
-        $isCoolerExist = Product::where('cat', 'cooler')->first();
-        if(  $isCoolerExist == FALSE ){
-            Product::create([
-                'cat' => 'cooler',
-                'desc' => "Maximize your CPU's potential and keep temperatures in check with our high-performance processor cooler. Engineered for efficiency and reliability, our cooler effectively dissipates heat to ensure optimal CPU performance even under heavy loads. With its sleek design and quiet operation, it seamlessly integrates into any system, providing both style and functionality. Upgrade your cooling solution today and unleash the full power of your CPU with our top-of-the-line processor cooler.",
-                'price' => '$40',
-            ]);
-        }
-
-        $isMonitorExist = Product::where('cat', 'monitor')->first();
-        if(  $isMonitorExist == FALSE ){
-            Product::create([
-                'cat' => 'monitor',
-                'desc' => "Immerse yourself in stunning visuals with our high-definition monitor. Featuring a vibrant display and crisp resolution, it brings your content to life with incredible clarity and detail. Whether you're working on spreadsheets, streaming your favorite shows, or gaming with friends, our monitor delivers an unparalleled viewing experience. Upgrade your setup and elevate your entertainment with our top-of-the-line monitor.",
-                'price' => "$150",
-            ]);
-        }
-
-        $isCaseExist = Product::where('cat', 'case')->first();
-        if(  $isCaseExist == FALSE ){
-            Product::create([
-                'cat' => 'case',
-                'desc' => "Elevate your PC build with our sleek and functional computer case. Designed for both style and performance, our case offers ample space for all your components while providing optimal airflow for efficient cooling. With its modern aesthetics and customizable features, it's the perfect canvas to showcase your unique style and build. Upgrade your setup and protect your components with our premium-quality computer case.",
-                'price' => "$70",
-            ]);
-        }
-
-        $isMouseExist = Product::where('cat', 'mouse')->first();
-        if(  $isMouseExist == FALSE ){
-            Product::create([
-                'cat' => 'mouse',
-                'desc' => "Elevate your computing experience with our precision-engineered mouse. Designed for comfort and accuracy, it glides effortlessly across any surface, delivering smooth and responsive performance. With customizable buttons and ergonomic design, it's perfect for both work and play, providing ultimate control and comfort for hours of use. Upgrade your setup and unleash your full potential with our top-of-the-line mouse.",
-
-                'price' => "$20",
-            ]);
-        }
-
-        $isKeyboardExist = Product::where('cat', 'keyboard')->first();
-        if(  $isKeyboardExist == FALSE ){
-            Product::create([
-                'cat' => 'keyboard',
-                'desc' => "Enhance your typing experience with our premium keyboard. Engineered for comfort and precision, each keystroke is responsive and satisfying, whether you're typing up documents or dominating in your favorite game. With customizable RGB lighting and programmable keys, you can personalize your setup to match your style and workflow. Upgrade your typing game and unlock a new level of productivity with our top-of-the-line keyboard.",
-
-                'price' => "$30",
-            ]);
-        }
 
 
         return view('ticket.create');
