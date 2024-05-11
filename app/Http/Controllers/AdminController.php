@@ -13,10 +13,6 @@ class AdminController extends Controller
 {
     public function index(){
         $data = Ticket::all();
-
-
-
-
         return view('admin.index', compact('data'));
     }
 
