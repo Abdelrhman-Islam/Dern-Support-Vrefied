@@ -22,10 +22,9 @@ class AppController extends Controller
                 'type' => 'admin',
                 'name' => 'admin',
                 'email' => 'admin@gmail.com',
-                'collageCode' => 1,
                 'password' => Hash::make('00000000'),
             ]);
-
+        }
 
         $isCPUExist = Product::where('cat','CPU (Central Processing Unit)')->first();
         if(  $isCPUExist == FALSE ){
@@ -73,7 +72,6 @@ class AppController extends Controller
                 'price' => '200$',
             ]);
         }
-        }
 
         return view('ld');
     }
@@ -84,8 +82,6 @@ class AppController extends Controller
     }
 
     public function createTicket(){
-
-
 
         return view('ticket.create');
     }
@@ -104,10 +100,7 @@ class AppController extends Controller
             'userId' => $userId,
         ]);
 
-
-
         return to_route('user.index');
-
 
     }
 
