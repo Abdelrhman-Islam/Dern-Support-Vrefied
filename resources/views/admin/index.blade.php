@@ -6,7 +6,7 @@
 
             <a class="btn btn-outline-success mb-3" href="{{ route('inventory.index') }}"> Inventory </a>
 
-            
+
             <table class="table">
                 <thead>
                 <tr>
