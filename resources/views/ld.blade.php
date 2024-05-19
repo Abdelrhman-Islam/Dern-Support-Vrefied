@@ -3,6 +3,18 @@
 @section('content')
 
     <div class="container">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+              <a class="navbar-brand">DERN-SUPPORT</a>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="btn btn-primary" href="{{ route('login') }}" aria-disabled="true">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         <section class="text-center pt-3">
             <h1>Dern Support</h1>
         </section>

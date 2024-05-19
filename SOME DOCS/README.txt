@@ -3,9 +3,8 @@ To run this project follow this few steps
 1- In CMD run:
 	1.1- composer install
 	1.2- npm install
-	2.3 php artisan migrate
-		#And agree to create this database 
 	1.3- code .
+
 2- Whin your compiler open type this commands in different termenals
 
 	2.1- Termenal 1
@@ -13,10 +12,16 @@ To run this project follow this few steps
 	2.2- Temenal 2
 		2.2.1- php artisan serve
 			#Follow the link that appears in front of you
+	2.3 Check MySQL port
+	
+	2.4- Temenal 3
+		2.4.1 php artisan migrate
+			#And agree to create this database 
 
 
-** Admin Account **
-email "admin@gmail.com"
-password "00000000"
+
+** To sign in with admin account **
+	email "admin@gmail.com"
+	password "00000000"
 
 ## I hope you enjoy the experience of my project (^_^)
