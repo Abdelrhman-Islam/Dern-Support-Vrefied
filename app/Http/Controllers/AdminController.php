@@ -16,11 +16,11 @@ class AdminController extends Controller
         return view('admin.index', compact('data'));
     }
 
-    public function setProb($id){
+    public function setPriority($id){
         $data = Ticket::find($id);
-        $prob = request()->prob;
+        $priority = request()->priority;
         $data->update([
-            'prob'=>$prob,
+            'priority'=>$priority,
         ]);
 
         return to_route('admin.index');

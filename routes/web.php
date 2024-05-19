@@ -46,7 +46,7 @@ Route::get('/qa', [AppController::class, 'qa'])->name('qa');
 
 Route::get('/adminHome', [AdminController::class, 'index'])->name('admin.index');
 
-Route::put('/setProb/{id}', [AdminController::class, 'setProb'])->name('prob.set');
+Route::put('/setPriority/{id}', [AdminController::class, 'setPriority'])->name('priority.set');
 
 
 //////////// Inventory //////
